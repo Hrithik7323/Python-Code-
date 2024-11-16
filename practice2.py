@@ -1,5 +1,11 @@
-# store the above value in a list & sort them from "A" to "D".
+#figure out a way store 9 & 9.0 as separate value in the set.
+#(You can take help of bulid-in data types)
 
-grade = ["C", "D", "A", "A", "B", "B", "A"]
-grade.sort()
-print(grade)
+value = {
+    ("int", 9),
+    ("float", 9.0)
+}
+print(value)
+
+#value = {"9", 9.0}
+#print(value)
