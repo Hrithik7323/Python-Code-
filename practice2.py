@@ -1,11 +1,25 @@
-#WAF to print the elements of a list a single line. (list is the parameter)
+# Define a Employee class with attributes role, department & salary. This class also a
+# showDetails() method.
 
-cities = ["patna", "modinagar", "digha", "danapur"]
-heroes = ["krish", "krishna", "jiwan", "saktiman", "hanuman"]
+# Creat an Engineer class that inherits properties from Employee & has additional
+# attribute : name & age.
 
-def print_len(list):
-    for item in list:
-        print(item, end=" ")
+class Employee:
+    def __init__(self, role, dept, salary):
+        self.role = role
+        self.dept = dept
+        self.salary = salary
 
-print_len(heroes)        
+    def showDeatail(self):
+        print("role =", self.role)
+        print("dept =", self.dept)
+        print("salary =", self.salary)
 
+class Engineer(Employee):
+    def __init__(self, name, age):
+        self.name =name
+        self.age = age
+        super().__init__("Engineer", "IT", "75,000")
+
+eng1 = Engineer("Hrithik Kumar", 24)
+eng1.showDeatail()         
